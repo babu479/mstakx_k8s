@@ -16,7 +16,7 @@ NONE='\033[00m'
 print_help(){
   echo -e "${YELLOW}Use the following Command:"
   echo -e "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-  echo -e "${RED}./<script-name> --action <action-name> --deployment <deployment-name> --scaleup <scaleupthreshold> --scaledown <scaledownthreshold>"
+  echo -e "${RED}./<script-name> --action <action-name> --deployment <deployment-name> --namespace <namespaceName> --scaleup <scaleupthreshold> --scaledown <scaledownthreshold>"
   echo -e "${YELLOW}+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
   printf "Choose one of the available actions below:\n"
   printf " get-podcpu\n deploy-pod-autoscaling\n"
