@@ -111,10 +111,17 @@ Horizontal Pod autoscaler has been configured to the frontend application, we ke
 ########## wrapper script for POD autoscaler ############
 #### file1: wrapper_script_to_check_pod_autoscaler.sh
 you can run this script to check pod autoscaler, it will store the output on logfile
-#### bash wrapper_script_to_check_pod_autoscaler.sh --help --> this command will suggest you , how to pass arguments to the script
+#### bash wrapper_script_to_check_pod_autoscaler.sh --help --> this ommand will suggest you , how to pass arguments to the script
 
-Logfile: /var/log/kube-deploy/kube-$DEPLOYMENT-$TODAY.log  
+Logfile: /var/log/kube-deploy/kube-$DEPLOYMENT-$TODAY.log  wrapper.sh
 
+## Step10:
+#### file1: wrapper.sh
+
+finally, you can use this script to do all the things above 
+
+## bash wrapper.sh --help
+## bash wrapper.sh --action CreateCluster
 
 
 
