@@ -70,11 +70,13 @@ Creating the Redis Slave Deployment on production namespace
 creating the redis slave service for redis slave deployment on production namespace
 #### #kubectl create -f redis-slave-service-production.yaml
 
-##################### Expose staging application on hostname staging-guestbook.mstakx.io ######################
+############# Expose staging application on hostname staging-guestbook.mstakx.io ##########
 #### file1: ingress-staging.yaml
 Exposing frontend deployment on hostname staging-guestbook.mstakx.io on staging namespace
 #### #kubectl create -f ingress-staging.yaml
 
-##################### Expose production application on hostname guestbook.mstakx.io ######################
-#### file1: 
+############ Expose production application on hostname guestbook.mstakx.io #########
+#### file1: ingress-prod.yaml
+Exposing frontend deployment on hostname guestbook.mstakx.io on production namespace
+#### #kubectl create -f ingress-prod.yaml
 
