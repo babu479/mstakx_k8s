@@ -33,5 +33,13 @@ This file help you to create frontend deployment on staging namespace
 this yaml file is used to create service to the frontend deployment and we are not expose this with any type like NodePort,LoadBalancer,clusterIP
 ### #kubectl create -f frontend-service-staging.yaml
 
+### file3: redis-master-deployment-staging.yaml
+Creating the Redis Master Deployment on staging namespace
+### #kubectl create -f redis-master-deployment-staging.yaml
+
+### file4: redis-master-service-staging.yaml
+Creating the Redis Master Service for redis master deployment on staging namespace
+
+
 
 
