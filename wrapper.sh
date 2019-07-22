@@ -16,7 +16,7 @@ NONE='\033[00m'
 print_help(){
   echo -e "${YELLOW}Use the following Command:"
   echo -e "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-  echo -e "${RED}./<script-name> --action <action-name> --deployment <deployment-name> --scaleup <scaleupthreshold> --scaledown <scaledownthreshold>"
+  echo -e "${RED}./<script-name> --action <action-name> "
   echo -e "${YELLOW}+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
   printf "Choose one of the available actions below:\n"
   printf " prerequisities-install\n kops-install\n kubectl-install\n aws_cli\n aws-configure\n aws-s3configure\n Kops-cluster-creation\n "
@@ -161,7 +161,7 @@ echo "Here we are configuring guestbook application in production"
   kubectl get hpa --namespace=production
 
 }
-if [ "$ACTION" = "prerequisities-install" ];then
+if [ "$ACTION" = "CreateCluster" ];then
 if [ $ARG -ne 2 ]
       then
         echo "Incorrect No. of Arguments Provided"
