@@ -80,3 +80,12 @@ Exposing frontend deployment on hostname staging-guestbook.mstakx.io on staging 
 Exposing frontend deployment on hostname guestbook.mstakx.io on production namespace
 #### #kubectl create -f ingress-prod.yaml
 
+################# Heapster Controller for get metrics from Pods ##################
+#### file1: heapster-controller-service.yaml
+Using this file we can install heapster deployment and service for deployment
+#### #kubectl create -f heapster-controller-service.yaml
+
+we have to be in same network while writing horizontal pod autoscaler
+
+#### #kubectl create -f   "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
+
