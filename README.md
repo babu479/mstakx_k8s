@@ -12,10 +12,26 @@ it contains namespace creation,deployment,Service,ConfigMap,serviceAccount,Cluse
 it contains service creation of nginx controller with loadBalancer
 ### #kubectl create -f nginx-ingress-controller.yaml,nginx-controller-service.yaml
 
-###################### create namespaces called staging and production ######################
+###################### create namespaces staging and production ######################
 ### file1: staging-namespace.yaml
 using this yaml file, we can create staging namespace
 
 ### #kubectl create -f staging-namespace.yaml
 
-### file2: 
+### file2: production-namespace.yaml
+using this yaml file, we can create production namespace
+
+### #kubectl create -f production-namespace.yaml
+
+
+##################### Install guest-book Application on staging and production namespaces ################
+## Namespace : staging
+### file1: frontend-deployment-staging.yaml
+This file help you to create frontend deployment on staging namespace
+### #kubectl create -f frontend-deployment-staging.yaml
+### file2: frontend-service-staging.yaml
+this yaml file is used to create service to the frontend deployment and we are not expose this with any type like NodePort,LoadBalancer,clusterIP
+### #kubectl create -f frontend-service-staging.yaml
+
+
+
