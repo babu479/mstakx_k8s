@@ -89,3 +89,13 @@ we have to be in same network while writing horizontal pod autoscaler
 
 #### #kubectl create -f   "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
 
+########### Implementing a pod autoscaler on both namespaces ##########
+## Namespace: Staging
+#### file1: HPA-staging.yaml
+Horizontal Pod autoscaler has been configured to the frontend application, we kept target to 75% once current metrics reached to 75%, automatically pod will increse on staging namespace
+#### #kubectl create -f HPA-staging.yaml
+
+## Namespace: Production
+#### file2: HPA-production.yaml
+Horizontal Pod autoscaler has been configured to the frontend application, we kept target to 75% once current metrics reached to 75%, automatically pod will increse on production namespace
+
