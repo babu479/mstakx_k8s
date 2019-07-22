@@ -39,7 +39,13 @@ Creating the Redis Master Deployment on staging namespace
 
 ### file4: redis-master-service-staging.yaml
 Creating the Redis Master Service for redis master deployment on staging namespace
-
+### #kubectl create -f redis-master-service-staging.yaml
+### file5: redis-slave-deployment-staging.yaml
+Creating the Redis Slave Deployment on staging namespace
+### #kubectl create -f redis-slave-deployment-staging.yaml
+### file6: redis-slave-service-staging.yaml
+creating the redis slave service for redis slave deployment on staging namespace
+### #kubectl create -f redis-slave-service-staging.yaml
 
 
 
