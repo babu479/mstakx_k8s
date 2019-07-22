@@ -100,5 +100,13 @@ Horizontal Pod autoscaler has been configured to the frontend application, we ke
 Horizontal Pod autoscaler has been configured to the frontend application, we kept target to 75% once the CPU  current metrics reached to 75%, automatically pod will increse on production namespace
 #### #kubectl create -f HPA-production.yaml
 
+########## wrapper script for POD autoscaler ############
+#### file1: wrapper_script_to_check_pod_autoscaler.sh
+you can run this script to check pod autoscaler, it will store the output on logfile
+#### bash wrapper_script_to_check_pod_autoscaler.sh --help --> this command will suggest you , how to pass arguments to the script
+
+Logfile: /var/log/kube-deploy/kube-$DEPLOYMENT-$TODAY.log  
+
+
 
 
