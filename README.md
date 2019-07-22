@@ -27,7 +27,7 @@ using this yaml file, we can create production namespace
 
 #### #kubectl create -f production-namespace.yaml
 
-
+## step4:
 ##################### Install guest-book Application on staging and production namespaces ################
 ## Namespace : staging
 #### file1: frontend-deployment-staging.yaml
@@ -73,16 +73,19 @@ Creating the Redis Slave Deployment on production namespace
 creating the redis slave service for redis slave deployment on production namespace
 #### #kubectl create -f redis-slave-service-production.yaml
 
+## Step 5:
 ############# Expose staging application on hostname staging-guestbook.mstakx.io ##########
 #### file1: ingress-staging.yaml
 Exposing frontend deployment on hostname staging-guestbook.mstakx.io on staging namespace
 #### #kubectl create -f ingress-staging.yaml
 
+## Step6:
 ############ Expose production application on hostname guestbook.mstakx.io #########
 #### file1: ingress-prod.yaml
 Exposing frontend deployment on hostname guestbook.mstakx.io on production namespace
 #### #kubectl create -f ingress-prod.yaml
 
+## Step7:
 ################# Heapster Controller for get metrics from Pods ##################
 #### file1: heapster-controller-service.yaml
 Using this file we can install heapster deployment and service for deployment
@@ -92,6 +95,7 @@ we have to be in same network while writing horizontal pod autoscaler
 
 #### #kubectl create -f   "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
 
+## Step8:
 ########### Implementing a pod autoscaler on both namespaces ##########
 ## Namespace: Staging
 #### file1: HPA-staging.yaml
@@ -103,6 +107,7 @@ Horizontal Pod autoscaler has been configured to the frontend application, we ke
 Horizontal Pod autoscaler has been configured to the frontend application, we kept target to 75% once the CPU  current metrics reached to 75%, automatically pod will increse on production namespace
 #### #kubectl create -f HPA-production.yaml
 
+## Step9:
 ########## wrapper script for POD autoscaler ############
 #### file1: wrapper_script_to_check_pod_autoscaler.sh
 you can run this script to check pod autoscaler, it will store the output on logfile
