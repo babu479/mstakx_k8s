@@ -1,0 +1,17 @@
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: guestbook-frontend
+  namespace: staging
+  labels:
+    app: guestbook
+    env: production
+    tier: frontend
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1beta1
+    kind: Deployment
+    name: frontend
+  minReplicas: 1
+  maxReplicas: 5
+  targetCPUUtilizationPercentage: 75
