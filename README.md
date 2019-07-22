@@ -26,26 +26,46 @@ using this yaml file, we can create production namespace
 
 ##################### Install guest-book Application on staging and production namespaces ################
 ## Namespace : staging
-### file1: frontend-deployment-staging.yaml
+#### file1: frontend-deployment-staging.yaml
 This file help you to create frontend deployment on staging namespace
 ### #kubectl create -f frontend-deployment-staging.yaml
-### file2: frontend-service-staging.yaml
+#### file2: frontend-service-staging.yaml
 this yaml file is used to create service to the frontend deployment and we are not expose this with any type like NodePort,LoadBalancer,clusterIP
 ### #kubectl create -f frontend-service-staging.yaml
 
-### file3: redis-master-deployment-staging.yaml
+#### file3: redis-master-deployment-staging.yaml
 Creating the Redis Master Deployment on staging namespace
 ### #kubectl create -f redis-master-deployment-staging.yaml
 
-### file4: redis-master-service-staging.yaml
+#### file4: redis-master-service-staging.yaml
 Creating the Redis Master Service for redis master deployment on staging namespace
 ### #kubectl create -f redis-master-service-staging.yaml
-### file5: redis-slave-deployment-staging.yaml
+#### file5: redis-slave-deployment-staging.yaml
 Creating the Redis Slave Deployment on staging namespace
 ### #kubectl create -f redis-slave-deployment-staging.yaml
-### file6: redis-slave-service-staging.yaml
+#### file6: redis-slave-service-staging.yaml
 creating the redis slave service for redis slave deployment on staging namespace
-### #kubectl create -f redis-slave-service-staging.yaml
+#### #kubectl create -f redis-slave-service-staging.yaml
 
+## Namespace : Production
+#### file1: frontend-deployment-production.yaml
+This file help you to create frontend deployment on production namespace
+### #kubectl create -f frontend-deployment-production.yaml
+#### file2: frontend-service-production.yaml
+this yaml file is used to create service to the frontend deployment and we are not expose this with any type like NodePort,LoadBalancer,clusterIP
+### #kubectl create -f frontend-service-production.yaml
 
+#### file3: redis-master-deployment-production.yaml
+Creating the Redis Master Deployment on production namespace
+### #kubectl create -f redis-master-deployment-production.yaml
+
+#### file4: redis-master-service-production.yaml
+Creating the Redis Master Service for redis master deployment on production namespace
+### #kubectl create -f redis-master-service-production.yaml
+#### file5: redis-slave-deployment-production.yaml
+Creating the Redis Slave Deployment on production namespace
+### #kubectl create -f redis-slave-deployment-production.yaml
+#### file6: redis-slave-service-production.yaml
+creating the redis slave service for redis slave deployment on production namespace
+#### #kubectl create -f redis-slave-service-production.yaml
 
