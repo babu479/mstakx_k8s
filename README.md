@@ -3,7 +3,8 @@
 step 1: Created a kubernetes cluster in aws cloud using kops utility, I have written one shell script code to create kubernetes cluster by using your inputs
 ### #bash cluster_creation.sh --action createCluster
 Step 2: Configuring Nginx ingress controller, I have written two yaml files one for nginx ingress deployment and another is to create service for nginx ingress deployment 
-##########################################INGRESS-CONTROLLER##################################
+
+##########################INGRESS-CONTROLLER######################
 ### file1: nginx-ingress-controller.yaml 
 it contains namespace creation,deployment,Service,ConfigMap,serviceAccount,CluserRole,Role,RoleBinding,ClusterRoleBinding and Deployment of ingress controller
 
