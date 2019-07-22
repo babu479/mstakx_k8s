@@ -120,8 +120,8 @@ Logfile: /var/log/kube-deploy/kube-$DEPLOYMENT-$TODAY.log  wrapper.sh
 
 finally, you can use this script to do all the things above 
 
-## bash wrapper.sh --help
-## bash wrapper.sh --action CreateCluster
+#### #bash wrapper.sh --help
+#### #bash wrapper.sh --action CreateCluster
 
 
 
